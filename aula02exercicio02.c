@@ -2,6 +2,7 @@
 
 int main(void){
     int initHour, initMinutes, initSeconds;
+    int totalSeconds;
     int durationSeconds;
     int horaTermino, minutosTermino, segundosTermino;
 
@@ -9,9 +10,11 @@ int main(void){
 
     scanf("%d", &durationSeconds);
 
-    printf("%d %d", (durationSeconds/3600), ((durationSeconds%3600)/60));
+    totalSeconds = (initHour/3600) + (initMinutes/60) + initSeconds + durationSeconds;
 
-    horaTermino = (initHour+(durationSeconds/3600));
-    printf(" %d", horaTermino);
+    horaTermino = (totalSeconds + durationSeconds)/3600;
+    minutosTermino = ((totalSeconds + durationSeconds)%3600);
+    segundosTermino = ((totalSeconds + durationSeconds)%3600)%60;
 
+    printf("%d %d %d", horaTermino, minutosTermino, segundosTermino);
 }
