@@ -1,20 +1,19 @@
 #include <stdio.h>
 
 int main(void){
-    int initHour, initMinutes, initSeconds;
-    int totalSeconds;
-    int durationSeconds;
-    int horaTermino, minutosTermino, segundosTermino;
+    float x, y, z, premio, invest;
 
-    scanf("%d %d %d", &initHour, &initMinutes, &initSeconds);
+    float xporcent, yporcent, zporcent;
 
-    scanf("%d", &durationSeconds);
 
-    totalSeconds = (initHour/3600) + (initMinutes/60) + initSeconds + durationSeconds;
+    scanf("%f", &premio);
+    scanf("%f %f %f", &x, &y, &z);
 
-    horaTermino = (totalSeconds + durationSeconds)/3600;
-    minutosTermino = ((totalSeconds + durationSeconds)%3600);
-    segundosTermino = ((totalSeconds + durationSeconds)%3600)%60;
+    invest = x+y+z;
 
-    printf("%d %d %d", horaTermino, minutosTermino, segundosTermino);
+    xporcent = (x/invest) * premio;
+    yporcent = (y/invest) * premio;
+    zporcent = (z/invest) * premio;
+
+    printf("%f %f %f", xporcent, yporcent, zporcent);
 }

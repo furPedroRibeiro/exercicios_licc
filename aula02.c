@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void){
-    //printf("Digite o número de dias:");
+    //printf("Digite o nï¿½mero de dias:");
     int dias, semanas, diasSoltos;
     scanf("%d", &dias);
     semanas = dias/7;
